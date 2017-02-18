@@ -1,0 +1,417 @@
+﻿Imports System.Net.Sockets
+ 
+Module Module1
+    Private CMD As String
+    Private CMD1 As String
+    Private nl = vbNewLine
+    Private ip
+    Private beepoff As Boolean = False
+    Private beepon As Boolean = True
+    Private Count As Integer = 0
+    Private Found As Integer = 0
+    Private Versionn As String = "2.0.3"
+    Private NoFound As Integer = 0
+    Private SettingsPort As Integer = 23
+    Private TemptCounter As Integer = 0
+    Private conwith As Integer
+    Private conheight As Integer
+    Private myrandomm
+ 
+    Sub Main()
+        'Console.WindowHeight = Console.LargestWindowHeight
+        ''
+        ' Console.SetBufferSize(Console.LargestWindowWidth, Console.LargestWindowHeight)
+        'Console.SetWindowPosition(Console.LargestWindowWidth / 2, Console.LargestWindowHeight / 2)
+        'Console.Read()
+        conwith = Console.WindowWidth
+        conheight = Console.WindowHeight
+        Console.Title = "Defcon WarHead"
+        Console.ForegroundColor = ConsoleColor.Green
+        Console.WriteLine(vbNewLine)
+        Console.WriteLine("                +-----------------------------------------+")
+        Console.WriteLine("                |                                         |")
+        Console.WriteLine("                |             Defcon WarHead              |")
+        Console.WriteLine("                |                War Dialer               |")
+        Console.WriteLine("                |                  2.3                    |")
+        Console.WriteLine("                +-----------------------------------------+")
+        If Not System.IO.File.Exists("DefconWarHead.txt") Then
+            FileOpen(2, "DefconWarHead.txt", OpenMode.Output)
+            '  PrintLine(2, Nothing)
+            FileClose(2)
+            Console.WriteLine("File: DefconWarHead.txt ,Does not exist.")
+            Console.WriteLine("Creating: DefconWarHead.txt")
+ 
+        End If
+        If Not System.IO.File.Exists("DefconReachedServers.txt") Then
+            Console.WriteLine("File: DefconReachedServers.txt ,Does not exist.")
+            Console.WriteLine("Creating: DefconReachedServers.txt")
+            FileOpen(1, "DefconReachedServers.txt", OpenMode.Output)
+            FileClose(1)
+            Console.WriteLine(vbNewLine)
+            Console.WriteLine("Press Any Key To Continue...")
+            Console.Beep()
+            Console.ReadKey()
+            Title()
+            Console.ResetColor()
+            Console.WriteLine("NOTE: If You War dial, Your Reached Server List Will Reset.")
+            Console.Write("Type: 'help' for help." + nl)
+            Commands()
+        End If
+        Try
+            Dim myrandomm As Integer = CInt(Int((9 * Rnd()) + 1))
+            Shell("cmd.exe /c copy DefconWarHead.txt DefconWarHeadTemp" + myrandomm + ".txt")
+            FileOpen(2, "DefconWarHeadTemp" + myrandomm, OpenMode.Input)
+        Catch ex As Exception
+ 
+        End Try
+ 
+        Title()
+        Console.ResetColor()
+        Console.WriteLine("Type: 'help' for help." + nl)
+        Console.Beep()
+        'Default Beep Console.Beep(800, 300)
+        Commands()
+    End Sub
+ 
+    Sub runn()
+        FileOpen(9, "DefconReachedServers.txt", OpenMode.Output)
+        Console.ForegroundColor = ConsoleColor.Green
+        Console.WriteLine("Dialing Modem")
+ 
+        While Not EOF(2)
+            Count += 1
+            Dim xcount = "(" + Count.ToString + ")"
+            ' If Console.Read = True Then
+            'Console.WriteLine("T")
+            '   End If
+            Try
+                ip = LineInput(2)
+                Console.ForegroundColor = ConsoleColor.Green
+                Console.Write(xcount + "Dialing: " + ip + "...." + SettingsPort.ToString + "...")
+                Dim telnetServerIp As String = ip
+                Dim telnetPort = SettingsPort
+                Dim client As New TcpClient(telnetServerIp, telnetPort)
+                Found += 1
+                Console.ForegroundColor = ConsoleColor.Green
+                Console.Write("Carrier Found: (" + Found.ToString + ")" + nl)
+                ' Console.WriteLine("(" + Found.ToString + ")" + "Reached Server: " + ip + nl)
+                If beepon = True Then
+                    Console.Beep(2000, 300)
+                End If
+                Try
+ 
+                    PrintLine(9, ip)
+ 
+                Catch ex As Exception
+                    Dim R As Integer = CInt(Int((6 * Rnd()) + 1))
+                    FileOpen(4, "DefconReachedServers." + R + ".txt", OpenMode.Output)
+                    Console.ForegroundColor = ConsoleColor.Yellow
+                    Console.WriteLine("Could not save to Specifide File, Creating a new one to save to.")
+                    Console.ForegroundColor = ConsoleColor.Green
+                End Try
+ 
+            Catch ex As Exception
+                NoFound += 1
+                Console.ForegroundColor = ConsoleColor.Red
+                Console.Write("No Carrier Found: " + NoFound.ToString + nl)
+                ' Console.WriteLine("Could Not Reached Server: " + ip + " : " + SettingsPort.ToString + nl)
+                If beepoff = True Then
+                    Console.Beep(100, 300)
+                End If
+            End Try
+            Console.Title = "Defcon WarHead ,Found (" + Found.ToString + ")"
+        End While
+ 
+ 
+        If EOF(2) = True Then
+            FileClose(1)
+            Console.ForegroundColor = ConsoleColor.Yellow
+            Console.WriteLine("Dialing: Finish" + nl)
+            Console.WriteLine("Open: " + Found.ToString + " Out Of " + Count.ToString)
+            Console.WriteLine("Not found: " + NoFound.ToString)
+            Console.ForegroundColor = ConsoleColor.Green
+            Console.Beep()
+            Console.Beep()
+            Console.Beep()
+        Else
+            Console.Beep()
+        End If
+        FileClose(9)
+        Count = 0
+        Found = 0
+        NoFound = 0
+    End Sub
+    Sub Title()
+        Console.Title = "Defcon WarHead"
+        Console.Clear()
+        Console.ForegroundColor = ConsoleColor.Green
+        Console.WriteLine(vbNewLine)
+        Console.WriteLine("                +-----------------------------------------+")
+        Console.WriteLine("                |                                         |")
+        Console.WriteLine("                |             Defcon WarHead              |")
+        Console.WriteLine("                |               War Dialer                |")
+        Console.WriteLine("                |                  2.3                    |")
+        Console.WriteLine("                +-----------------------------------------+")
+        Console.WriteLine(vbNewLine)
+    End Sub
+    
+ 
+    Sub Updater()
+        Dim request As System.Net.HttpWebRequest = System.Net.HttpWebRequest.Create("https://dl.dropboxusercontent.com/s/pzl5tm56920t0sr/Version.txt")
+        Dim response As System.Net.HttpWebResponse = request.GetResponse()
+        Dim x1xx1 As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream)
+        Dim NewVersion As String = x1xx1.ReadToEnd()
+        If Not NewVersion = Versionn Then
+            Console.WriteLine("Would you like to update. ?")
+            Console.WriteLine("Y/N")
+            Dim xcx = Console.ReadLine()
+            If xcx.ToUpper = "Y" Then
+                My.Computer.Network.DownloadFile("https://dl.dropboxusercontent.com/s/59pd9uc253pzor0/Decon%20WarHead%202.0.exe", "DefconWarHead" + NewVersion + ".exe")
+            Else
+                Console.WriteLine("Not going to update.")
+            End If
+        Else
+            Console.WriteLine("No new updates avalibe .")
+        End If
+    End Sub
+    Sub Listing()
+ 
+        Try
+ 
+            While Not EOF(2)
+                TemptCounter += 1
+                Try
+                    Console.WriteLine(LineInput(2))
+                    'Console.ReadLine()
+                Catch ex As Exception
+                    Console.WriteLine(ex.Message)
+                End Try
+            End While
+            FileClose(2)
+            FileOpen(2, "DefconWarHead.txt", OpenMode.Input)
+        Catch ex As Exception
+            Console.WriteLine("File not open, Please Open File." + vbNewLine + ex.Message)
+        End Try
+        Console.WriteLine(vbNewLine + "(" + TemptCounter.ToString + ")" + " Ips.")
+    End Sub
+    Sub Decoder()
+        If CMD1 = "HELP" Or CMD1 = "?" Then
+            Console.WriteLine("Cmd: Help  (View Help List)")
+            Console.WriteLine("Cmd: Close (Close Ip File)")
+            Console.WriteLine("Cmd: Open  (Open Ip File)")
+            Console.WriteLine("Cmd: Add  (Add New Ip To File)")
+            Console.WriteLine("Cmd: Dial  (Dial Computers On List)")
+            Console.WriteLine("Cmd: Cls  (Clear Screen)")
+            Console.WriteLine("CMD: Ping  (Ping An Ip)")
+            Console.WriteLine("Cmd: List  (List Ips in File)")
+            Console.WriteLine("Cmd: Dir  (List Files In Dial Folder)")
+            Console.WriteLine("Cmd: Settings  (Change Dialing Port)")
+            Console.WriteLine("Cmd: Version  (View Version Of Defcon WarHead)")
+            Console.WriteLine("CMD: PS  (Port Scan)")
+            Console.WriteLine("Cmd: Beeps  (Edit Beep Settings)")
+            Console.WriteLine("Cmd: Ports  (List Common Ports)")
+            Console.WriteLine("Cmd: Update  (Update To The Lastes Version)" + nl)
+        ElseIf CMD1 = "ADD" Then
+            Console.WriteLine("Ip:")
+            Dim NewIp As String = Console.ReadLine()
+            Try
+                FileClose(2)
+            Catch ex As Exception
+                Console.ForegroundColor = ConsoleColor.Yellow
+                Console.WriteLine(ex.Message)
+            End Try
+            Try
+                FileOpen(2, "DefconWarHead.txt", OpenMode.Output)
+                PrintLine(2, NewIp)
+            Catch ex As Exception
+                Console.ForegroundColor = ConsoleColor.Yellow
+                Console.WriteLine(ex.Message)
+            End Try
+            Try
+                FileClose(2)
+            Catch ex As Exception
+                Console.ForegroundColor = ConsoleColor.Yellow
+                Console.WriteLine(ex.Message)
+            End Try
+            Try
+                FileOpen(2, "DefconWarHead.txt", OpenMode.Input)
+                Console.WriteLine("Atemped to add: '" + NewIp + "' to list." + nl)
+            Catch ex As Exception
+                Console.ForegroundColor = ConsoleColor.Yellow
+                Console.WriteLine(ex.Message)
+            End Try
+        ElseIf CMD1 = "SECRET" Then
+            Shell("cmd.exe /c start www.youtube.com/watch?v=DLMXMFa03kg", AppWinStyle.Hide)
+        ElseIf CMD1 = "CLOSE" Then
+            Try
+                FileClose(2)
+                Console.WriteLine("Closed DefconWarHead.txt." + nl)
+            Catch ex As Exception
+                Console.ForegroundColor = ConsoleColor.Yellow
+                Console.WriteLine(ex.Message)
+            End Try
+ 
+        ElseIf CMD1 = "FLS" Then
+                Console.WriteLine("Full Screen" + nl)
+                Console.WindowWidth = Console.LargestWindowWidth
+        ElseIf CMD1 = "DTS" Then
+                Console.WriteLine("Default Screen" + nl)
+                Console.WindowWidth = conwith
+                Console.WindowHeight = conheight
+        ElseIf CMD1 = "FUCK YOU" Then
+                Dim SAPI = CreateObject("SAPI.spvoice")
+                SAPI.Volume = 100
+                SAPI.Rate = -3
+                SAPI.Speak("No, Fuck You. !")
+                Console.WriteLine("Type: Secret  for a secret.")
+ElseIf CMD1 = "SHELL" Then
+            Shell(Console.ReadLine)
+        ElseIf CMD1 = "PING" Then
+ 
+            Console.WriteLine("Who would you wish to ping to. ?")
+            Dim cxcmd = Console.ReadLine
+            Dim args = cxcmd.Split(" ")
+            If args.Length = 2 Then
+                Shell("cmd.exe /c ping " + args(0) + " -n 1")
+                Console.WriteLine("l0")
+            ElseIf args.Length = 3 Then
+                Shell("cmd.exe /c ping " + args(0) + " -l " + args(1) + " -n " + args(2))
+                Console.WriteLine("l3")
+            Else
+                Console.WriteLine("Usage: (IP) (Bytes) (Amount)")
+            End If
+        ElseIf CMD1 = "SETTINGS" Then
+                Console.WriteLine("Set port to dial on.")
+                SettingsPort = Console.ReadLine()
+                                ElseIf CMD1 = "PS" Then
+                Console.WriteLine("What ip would you wish to port scan ?")
+                Dim ccmd = Console.ReadLine
+                Shell("cmd.exe /c start http://anti-hacker-alliance.com/index.php?ip=" + ccmd)
+                Console.WriteLine("Please wait a few minutes.")
+        ElseIf CMD1 = "TITLE" Then
+                Title()
+            ' ElseIf CMD1 = "EXIT" Or CMD1 = "QUIT" Then
+            'Closes()
+        ElseIf CMD1 = "TELNET" Then
+                Shell("cmd.exe /c start telnet")
+        ElseIf CMD1 = "DIR" Then
+                Shell("cmd.exe /c dir")
+                Commands()
+ 
+        ElseIf CMD1 = "BEEPS" Then
+                Console.WriteLine("Would you like console to beep when server not found. ?")
+                Console.WriteLine("(Y/N)")
+                Dim xx1 = Console.ReadLine
+                If xx1.ToUpper = "Y" Then
+                    Console.WriteLine("Set to beep on non found servers")
+                    beepoff = True
+                Else
+                    Console.WriteLine("Set NOT to beep on non found servers")
+                    beepoff = False
+                End If
+                Console.WriteLine(vbNewLine)
+                Console.WriteLine("Would you like console to beep when server found. ?")
+                Console.WriteLine("(Y/N)")
+                Dim xx1x = Console.ReadLine
+                If xx1x.ToUpper = "Y" Then
+                    Console.WriteLine("Set to beep on found servers")
+                    beepon = True
+                Else
+                    Console.WriteLine("Set NOT to beep on found servers")
+                    beepon = False
+                End If
+ 
+ 
+ 
+        ElseIf CMD1 = "VERSION" Or CMD1 = "VER" Then
+                Console.WriteLine("Version: " + Versionn)
+ 
+        ElseIf CMD1 = "LIST" Or CMD1 = "LS" Then
+                Try
+                    FileOpen(2, "DefconWarHead.txt", OpenMode.Input)
+                Catch ex As Exception
+ 
+                End Try
+                Listing()
+        ElseIf CMD1 = "UPDATE" Then
+                Updater()
+ 
+        ElseIf CMD1 = "OPEN" Then
+                Try
+                    FileOpen(2, "DefconWarHead.txt", OpenMode.Input)
+                    Console.WriteLine("Opened DefconWarHead.txt." + nl)
+                Catch ex As Exception
+                    Console.ForegroundColor = ConsoleColor.Yellow
+                    Console.WriteLine(ex.Message)
+                End Try
+        ElseIf CMD1 = "CLS" Or CMD1 = "CLEAR" Then
+                Console.Clear()
+                Console.Title = "Defcon WarHead"
+        ElseIf CMD1 = "DIAL" Then
+                Try
+                    FileClose(2)
+                    FileOpen(2, "DefconWarHead.txt", OpenMode.Input)
+                Catch ex As Exception
+                    Console.ForegroundColor = ConsoleColor.Yellow
+                    Console.WriteLine(ex.Message + nl)
+                End Try
+                runn()
+ 
+        ElseIf CMD1 = "PORTS" Then
+                Console.WriteLine(vbNewLine)
+                Console.WriteLine("                +-----------------------------------------+")
+                Console.WriteLine("                |                                         |")
+                Console.WriteLine("                |            Most Common Ports            |")
+                Console.WriteLine("                |                                         |")
+                Console.WriteLine("                +-----------------------------------------+")
+                Console.WriteLine(vbNewLine)
+                Console.WriteLine("Port: 20 :FTP, Data Transfer.")
+                Console.WriteLine("Port: 21 :FTP, Control (Command).")
+                Console.WriteLine("Port: 22 :SSH, Secure Shell (SSH) secure logins, file transfers (scp, sftp) and port forwarding.")
+                Console.WriteLine("Port: 23 :TELNET, Telnet Protocol-unencrypted text communications.")
+                Console.WriteLine("Port: 24 :Priv-Mail, any private mail system.")
+                Console.WriteLine("Port: 25 :SMTP, Simple Mail Transfer Protocol, Used for e-mail routing.")
+                Console.WriteLine("Port: 35 :PSP, Any private Printer Server Protocol.")
+                Console.WriteLine("Port: 37 :TP, Time Protocol.")
+                Console.WriteLine("Port: 56 :RAP, Rout Access Protocol.")
+                Console.WriteLine("Port: 57 :PTA, Private Terminal Access.")
+                Console.WriteLine("Port: 80 :HTTP, Hypertext Transfer Protocol.")
+                Console.WriteLine("Port: 107 :RTSP, Remote Telnet Service Protocol.")
+                Console.WriteLine("Port: 108 :SGAS, SNA Gateway Access Server.")
+                Console.WriteLine("Port: 115 :SFTP, Simple File Transfer Protocol.")
+                Console.WriteLine("Port: 123 :NTP, Network Time Protocol.")
+                Console.WriteLine("Port: 152 :BFTP, Background File Transfer Protocol.")
+            Console.WriteLine("Port: 153 :SGMP, Simple Gateway Monitoring Protocol.")
+ 
+                Console.WriteLine("Port: 156 :SQLS, SQL Service.")
+                Console.WriteLine("Port: 8080 :Sometimes people have cameras setup.")
+ 
+                Console.WriteLine("Good website for getting a ton of ips: https://www.randomlists.com/ip-addresses")
+                Console.WriteLine(nl)
+        ElseIf CMD1 = Nothing Then
+ 
+        Else
+                Console.WriteLine("Unknown Command, Type 'help' for Help.")
+        End If
+    End Sub
+    Sub Commands()
+        Console.ForegroundColor = ConsoleColor.Green
+        'Console.WriteLine(vbNewLine)
+        Console.Write(">")
+        Dim xcmd = Console.ReadLine()
+        CMD = xcmd.TrimStart(">")
+        CMD1 = CMD.ToUpper
+        Decoder()
+        If Not CMD1 = "EXIT" Or CMD1 = "QUIT" Then
+            Commands()
+        End If
+ 
+    End Sub
+ 
+    Sub Closes()
+        Console.Clear()
+        Console.ForegroundColor = ConsoleColor.Yellow
+        Console.WriteLine("Goodbye!")
+        Threading.Thread.Sleep(3000)
+    End Sub
+End Module
