@@ -1,0 +1,139 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #FFFFFF;
+	color : #000000;
+
+	background-image: url(images/startpage/headerbg.png);
+	background-repeat: repeat-x;
+}
+#header, #container, #footer, #topbar { text-align: left;  }
+#header #logo, 
+#container, 
+#footer .content, 
+#topbar {
+	margin: 0 auto;
+	width: 580px;
+}
+#header #logo,
+#footer .content {
+	text-align: left;	
+}
+#header, #footer {
+	text-align: center;
+}
+body, input, select, textarea, td, th, optgroup {
+	font-family: Tahoma,Arial,Helvetica,sans-serif;
+	font-size: 11px;
+}
+th {
+	text-align: left;
+}
+
+a:link, a:visited, a:active, a:hover {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+form {
+	padding: 0px; margin: 0px;
+}
+
+#header {
+	height: 120px;
+}
+#header #logo {
+	padding-top: 36px;
+}
+#header #logo h1 {
+	margin: 0px;
+	padding: 0px;
+	color: white;
+	font-size: 1.8em;
+}
+#header #logo h2 {
+	margin: 0px;
+	padding: 0px;
+	padding-left: 40px;
+	color: white;
+	font-size: 0.8em;
+}
+#footer {
+	clear: both;
+	background-image: url(images/startpage/footerbg.png);
+	background-repeat: repeat-x;
+	color: #606060;
+	background-color: #DDDDDD;
+	height: 28px;
+	border-bottom: 1px solid #D9D9D9;
+}
+#footer .content {
+	padding-top: 8px;
+}
+
+#container {
+	margin-bottom: 15px;
+}
+#content {
+	margin-left: 200px;
+}
+#content_wide {
+	margin-left: 0px;
+}
+
+#leftnav {
+	float: left;
+	width: 200px;
+	margin-bottom: 20px;
+}
+
+#topbar {
+	background-image: url(images/startpage/topbar.png);
+	background-repeat: no-repeat;
+	background-color: white;
+	height: 32px;
+	margin-bottom: 12px;
+}
+#topbar #nowplaying {
+	padding: 8px 10px 0 10px;
+}
+#topbar #nowplaying #cc_tunein {
+	float: right;
+}
+h3 {
+	color: #686868;
+	font-size: 1.0em;
+	margin-top: 0px;
+}
+.block {
+	border: 1px solid #C6C6C6;
+	background-color: white;
+	padding: 2px;
+	margin-bottom: 15px;
+}
+.block .content {
+	background-color: #F2F2F2;
+	background-image: url(images/startpage/blockbg.png);
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	padding: 8px;
+	color: #606060;
+}
+
+a.mccredit,
+a.mccredit:link,
+a.mccredit:active,
+a.mccredit:visited,
+a.mccredit:hover {
+	font-weight: normal;
+	font-size: 10px;
+	text-decoration: none;
+	color: #909090;
+}
+a.mccredit:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+<asx version="3.0">
+	<title>HackThisSite Radio</title>
+	<author>http://www.hackthissite.org</author>
+	<copyright> HackThisSite</copyright>
+	<param name="HTMLView" value="http://www.hackthissite.org">
+	<moreinfo href="http://www.hackthissite.org">
+
+	<entry>
+		<ref href="http://radio.hackthissite.org:8000/stream">
+		<title>HackThisSite Radio</title> 
+		<author>http://www.hackthissite.org</author>
+	</ref></entry>
+</moreinfo></asx>

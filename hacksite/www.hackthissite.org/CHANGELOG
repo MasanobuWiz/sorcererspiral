@@ -1,0 +1,175 @@
+- Sun May 22 20:29:51 UTC 2016 by Kage - v3.2.5 -
+
+* Core:
+  * Added EU cookie notification
+* Missions:
+  * Added Forensic 3
+  * Fixed Forensic 2 scoring
+
+
+
+- Wed Apr 13 17:40:02 UTC 2016 by Kage - v3.2.4 -
+
+* Core:
+  * Brought code repositories up to date across all environments
+* Forums:
+  * Possible fix for registration problems
+  * Security updates
+* Missions:
+  * Added Forensic 2
+  * Fixed to Realistic 11
+  * Fixed JavaScript 6
+
+
+
+- Fri Jun 27 20:13:10 UTC 2014 by weekend - v3.2.3 -
+
+* Fixed password change issue
+* Check proper referer on vagrant
+
+
+
+- Wed Feb 26 22:20:22 UTC 2014 by d1str0 - v3.2.2.a -
+
+* Updated Programming Mission 5 so it is no longer broken
+* Updated Application 18 so it accepts proper answers
+
+
+
+- Sun Jan 12 23:13:23 UTC 2014 by kage - v3.2.2 -
+
+* Added content for maintenance downtime messages
+* Fixed username/passphrase bugs in new registration system
+* Fixed ads display
+
+
+
+- Fri Jan 10 20:48:12 UTC 2014 by weekend - v3.2.1 -
+
+* Made anonymous users actually anonymous on their profile page
+
+
+
+- Mon Jan  6 14:35:57 UTC 2014 by kage - v3.2.0.c -
+
+* Fixed broken ad clicks
+
+
+
+- Mon Jan  6 04:31:40 UTC 2014 by kage - v3.2.0 -
+
+* Revision A - Mon Jan  6 06:22:43 UTC 2014 by kage
+ > Addded Salted SHA512 password hashing across the board
+ > Fixed login password bug we should've caught before Stage
+ > Fixed login redirect bug from new registration system
+* Revision B - Mon Jan  6 07:22:11 UTC 2014 by kage
+ > Fixed login scope bug in MVC framework
+* Added new Forensics mission category
+* Added Managememt internal system for separated critical elements
+* Added new preliminary MVC framework
+* Updated entire registration system to use MVC and Management systems
+* Updated some existing static pages to use MVC framework
+* Updated development system with custom code linting
+* Updated internal addressing and DNS system for more appropriate routing
+* Updated 'About Project' page to be more modernized
+* Fixed potential application version exposure vulnerability
+
+
+
+- Sun Dec 15 05:08:38 UTC 2013 by kage - v3.1.9 -
+
+* Added Anonymous Login, accessible via login page
+* Changed 'Most Online' feature to no longer use a flat file
+* Fixed logout and other nonce bugs
+* Fixed Basic 4/5 mail vulnerabilities
+
+
+
+- Thu Dec  5 00:43:02 UTC 2013 by kage - v3.1.8 -
+
+* Fixed mail system settings
+* Fixed password reset mails not being sent
+
+
+
+- Sun Dec  1 22:41:24 UTC 2013 by kage - v3.1.7 -
+
+* Fixed login and registration captcha system
+
+
+
+- Sun Nov 24 16:33:44 UTC 2013 by kage - v3.1.6 -
+
+* Added advertising statistics supporting code
+* Fixed bug with last news system update
+
+
+
+- Fri Nov 15 00:54:08 UTC 2013 by kage - v3.1.5 -
+
+* Added new partnership button
+* Updated news system for easier staff updates
+* Fixed vulnerability in forums
+
+
+
+- Mon Oct 21 17:13:47 UTC 2013 by weekend - v3.1.4
+
+* Revision 1 - Mon Oct 28 03:10:53 UTC 2013 by fas
+ > Fix forum bugs that arose after dev testing
+* Revision 2 - Fri Nov  1 04:01:43 UTC 2013 by fas
+ > Fix forums SQL injection in header
+* Revision 3 - Sun Nov  3 08:22:42 UTC 2013 by fas
+ > Fix missing forums repo pointer update
+ > We messed up pi versioning. Forgive us. :(
+* Revision 4 - Mon Nov  4 01:11:13 UTC 2013 by fas
+ > Fix missing missions repo pointer update.
+* Fix some global code
+* Fix SQL injection in header
+* Fix typos for bug reports
+* Fix JS missions 3 & 6
+* Remove NSA banner
+
+
+
+- Fri Jun 14 21:00:50 UTC 2013 by Kage - v3.1.3
+
+* Modification for NSA story headliner
+
+
+
+- Mon Jun 10 05:24:54 UTC 2013 by Kage - v3.1.2
+
+* Registration success-page change
+* Final ads cleanup
+* Emergency bug fix
+
+
+
+- Thu Jun  6 21:05:50 UTC 2013 by Kage - v3.1.1
+
+* Authentication bug fix
+
+
+
+- Mon Jun  3 21:54:57 UTC 2013 by Kage - v3.1.0
+
+* Various small code fixes
+* Advertising system change (involved massive code cleanup)
+* Setup Phabricator with fas and spaux
+* Architect the development workflow with fas and spaux
+* Document walkthrough and run through a whole cycle of development
+
+SCIENCE RULEZ ~ Bill Nye
+
+
+
+- Thu Dec  6 19:05:57 UTC 2012 by Kage -
+
+* Deployed 5 web application servers with a Memcached shared sessions backend
+* Deployed Load Balancer with Forward/Reverse Proxies
+* Migrated HTS code to Denver location across web app servers via NFS-like
+  mount
+* Upgraded various portions of the HTS code
+
+See?  I do shit, too!

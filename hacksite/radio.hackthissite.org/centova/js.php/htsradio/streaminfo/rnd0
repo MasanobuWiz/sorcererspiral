@@ -1,0 +1,3 @@
+var arr468a9633 = { 'title': 'HackThisSite Radio','song': 'Adam Stacoviak and Wynn Netherland - The Changelog','bitrate': 128,'server': 'Online','source': 'Online','offline': '','summary': '\x3Ca href=\"http://radio.hackthissite.org/centova/tunein.php/htsradio/tunein.pls\"\x3EHackThisSite Radio - Adam Stacoviak and Wynn Netherland - The Changelog\x3C/a\x3E','url': 'http://radio.hackthissite.org/centova/js.php/htsradio/streaminfo/rnd939030','listeners': 0,'maxlisteners': 100,'reseller': 0 };
+
+cc_streaminfo_get_callback(arr468a9633);

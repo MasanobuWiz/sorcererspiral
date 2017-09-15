@@ -1,0 +1,203 @@
+tr, td, table, form, input, button, select, option, textarea{font-size:12px; page-break-inside:avoid}
+table.border{color:black; page-break-inside:avoid; border-color:Black; border-width:1px; border-style:solid; border-collapse:collapse}
+.tableheader{background-color:#9c3}
+.smallprint, .footer{font-size:11px}
+.subhead{font-size:12px; color:#9C0; font-weight:bold}
+.head, H1{font-size:17px; color:#000; line-height:100%}
+hr{border:0; color:#ccc; background-color:#ccc; height:1px; width:100%; text-align:left}
+img{border:0}
+img.imageborder{border-width:0}
+.clear{clear:both}
+.tableheaderbg{background-color:#000; color:#fff; text-align:left}
+.checkoutbg{background-color:#fff; text-align:left}
+.tablebg{background-color:#F5F5F5; color:#000}
+.tablebg2{background-color:#E9E9E9; color:#000}
+.sidebartext{color:#000}
+.sidebarbg{background-color:#fff}
+.alertmessage{color:#F00}
+.ffffff, .ffffff:link, .ffffff:visited{color:#fff}
+.75pt{font-size:7.5pt}
+.8pt{font-size:8pt}
+.arial8pt{font-size:8pt; font-family:arial,helvetica,sans-serif}
+.85pt{font:8.5pt}
+ul.horizontal{list-style-type:none}
+ul.horizontal li{display:inline}
+/* begin cmiller CSS additions */
+.standardText{font-size:12px}
+.smallText, .mediumprint, .textmedium{font-size:11px}
+.xsmallText, .smallprint, .smallerprint, .textsmall, .tinyprint{font-size:10px}
+.standardHeading{font-weight:bold}
+.mediumHeading{font-size:14px; font-weight:bold}
+.smallHeading{font-size:11px; font-weight:bold}
+.xsmallHeading{font-size:10px; font-weight:bold}
+.largeHeading{font-size:15px; font-weight:bold}
+.xlargeHeading{font-size:17px}
+.xxlargeHeading{font-size:19px}
+.standardSectionHeader{background-color:#999; padding:4px; font-size:14px; font-weight:bold; color:#FFF}
+.largeSectionHeader{background-color:#999; padding:4px; font-size:14px; font-weight:bold; color:#FFF}
+.smallSectionHeader{background-color:#999; padding:4px; font-size:11px; font-weight:bold; color:#FFF}
+.standardTableHeader{background-color:#999; font-weight:bold; color:#FFF}
+.largeTableHeader{background-color:#999; font-size:14px; font-weight:bold; color:#FFF; vertical-align:middle}
+.smallTableHeader{background-color:#999; padding:4px 0px; font-size:11px; font-weight:bold; color:#FFF; vertical-align:middle}
+.buttonPrimary{background-color:#F60; border-style:outset; border-width:2px; padding:1px 6px; line-height:16px; text-align:center; font-family:verdana; font-weight:bold; font-size:10px; color:#FFF; text-decoration:none}
+.buttonPrimary:link{color:#FFF}
+.buttonPrimary:visited{color:#FFF}
+.buttonPrimary:hover{background-color:#FFB448; color:#FFF; text-decoration:none}
+.buttonPrimaryMedium{background-color:#F60; border-style:outset; border-width:2px; padding:3px 8px; line-height:21px; text-align:center; font-family:verdana; font-weight:bold; font-size:11px; color:#FFF; text-decoration:none}
+.buttonPrimaryMedium:link{color:#FFF}
+.buttonPrimaryMedium:visited{color:#FFF}
+.buttonPrimaryMedium:hover{background-color:#FFB448; color:#FFF; text-decoration:none}
+.buttonSecondary{background-color:#F90; border-style:outset; border-width:2px; padding:1px 6px; line-height:16px; text-align:center; font-family:verdana; font-weight:bold; font-size:10px; color:#FFF; text-decoration:none}
+.buttonSecondary:link{color:#FFF}
+.buttonSecondary:visited{color:#FFF}
+.buttonSecondary:hover{background-color:#FFB448; color:#FFF; text-decoration:none}
+.buttonGray{background-color:#888; border-style:outset; border-width:2px; padding:1px 6px; line-height:16px; text-align:center; font-family:verdana; font-weight:bold; font-size:10px; color:#FFF; text-decoration:none}
+.buttonGray:link{color:#FFF}
+.buttonGray:visited{color:#FFF}
+.buttonGray:hover{background-color:#AAA; color:#FFF; text-decoration:none}
+.buttonGrayMedium{background-color:#888; border-style:outset; border-width:2px; padding:3px 8px; line-height:21px; text-align:center; font-family:verdana; font-weight:bold; font-size:11px; color:#FFF; text-decoration:none}
+.buttonGrayMedium:link{color:#FFF}
+.buttonGrayMedium:visited{color:#FFF}
+.buttonGrayMedium:hover{background-color:#AAA; color:#FFF; text-decoration:none}
+.buttonCloseWindow{background-color:#CCC; border-style:outset; border-width:1px; padding:1px 2px; font-weight:bold; font-size:10px; color:#000; float:right; width:94px}
+.buttonCloseWindow .x{display:block; border:1px solid #000; float:right}
+.buttonCloseWindow a:link{color:#000; text-decoration:none}
+.buttonCloseWindow a:visited{color:#000; text-decoration:none}
+.buttonCloseWindow a:hover{color:#000; text-decoration:none}
+.buttonWrapper{padding:2px 0px}
+.errorMessageWrapper{color:#F00; font-weight:bold; margin:4px 0px}
+
+/* end cmiller CSS additions */
+#productCaption{margin-bottom:5px}
+
+.cartETA{color:#759903}
+.cartShowHideShipping{}
+
+/* Premium Header
+---------------------------------- */
+#cpPremiumHeader{border:2px solid black; border-bottom-width:1px; padding:2px; background-color:#fff}
+#premshopNav{font-family:Arial,Helvetica,Sans-Serif; color:#000; margin:0; padding:0; float:right}
+#premshopNav li{float:left; font-family:Arial,Helvetica,Sans-Serif; font-size:11px; border-left:1px solid #000; padding:0 5px; margin-top:3px}
+#premshopNav a, #premshopNav a:link{color:#000}
+#premshopNav .noborder{border:0; padding-left:0}
+#intlCurrencyPrem a{position:relative; padding-right:25px; padding-bottom:3px; padding-left:25px; cursor:pointer}
+#intlCurrencyPrem a div#intlArrowDown{background:url(http://content.cpcache.com/global/img/intl_arrowdownshop.gif) center right no-repeat; width:7px; height:7px; position:absolute; top:3px; right:8px}
+#intlCurrencyPrem ul{position:absolute; width:50px; margin:0 0 0 -6px; background-color:#fff; border:1px solid #d1cec7; padding:0 5px; z-index:100}
+#intlCurrencyPrem li{width:50px; padding:5px 0; border-bottom:1px dashed #d8d8d8; border-left:0; margin-top:0}
+#intlCurrencyPrem li.lastintl{border-bottom:0}
+#intlCurrencyDropdown li a{padding-right:0}
+.aud, .cad, .gbp, .usd, .eur{padding-left:23px; position:relative; display:block}
+.aud{background:url(http://content.cpcache.com/global/img/intl_flagAUS.gif) left 1px no-repeat}
+.cad{background:url(http://content.cpcache.com/global/img/intl_flagCAN.gif) left 1px no-repeat}
+.gbp{background:url(http://content.cpcache.com/global/img/intl_flagUK.gif) left 1px no-repeat}
+.usd{background:url(http://content.cpcache.com/global/img/intl_flagUS.gif) left 1px no-repeat}
+.eur{background:url(http://content.cpcache.com/global/img/intl_flagEuro.gif) left 1px no-repeat}
+#intlCurrencyDropdown .aud, #intlCurrencyDropdown .cad, #intlCurrencyDropdown .gbp, #intlCurrencyDropdown .usd, #intlCurrencyDropdown .eur{background-position:left center}
+
+/* New Changes and Additions Aug 2010
+---------------------------------- 
+---------------------------------- 
+---------------------------------- */
+html, body{margin:0; padding:0; width:100%}
+
+/* Generic classes
+---------------------------------- */
+.floatR{float:right}
+.floatL{float:left}
+
+/* Layout and Structure
+---------------------------------- */
+#bodyContent{padding:10px; margin:0 auto}
+#sidebarContent{padding:5px}
+#cpWrapper{text-align:left; margin:0 auto}
+form{margin:0; padding:0}
+
+/* Legacy table elements
+---------------------------------- */
+#bodyContentTD{width:100%; vertical-align:top}
+#sidebarContentTD{min-width:125px; vertical-align:top}
+
+/* Font sizes
+---------------------------------- */
+.smallsidebartext{font-size:11px}
+.bodyText{font-size:12px}
+.storesmallprint{font-size:10px}
+
+/* Element Default Styling 
+---------------------------------- */
+.sidebarbg{border-right:1px solid #000}
+.breadCrumb{margin:0 0 20px 0; font-size:10px}
+
+/* Search Box styles
+---------------------------------- */
+#cpSearchFormContainer.cpSearchFormInHeader{text-align:right; padding:7px}
+#cpSearchFormContainer.cpSearchFormInSideBar{padding:2px 0}
+#cpSearchFormContainer.cpSearchFormInSideBar #searchterm{width:72%}
+#cpSearchFormContainer.cpSearchFormInSideBar #submitSearch{width:25%}
+#cpSearchFormContainer.cpSearchFormInSideBar #searchterm{margin:0 1px}
+#cpSearchFormContainer.cpSearchFormInHeader #searchterm{margin:0 2px}
+#cpSearchFormContainer #searchBoxLabel{font-weight:bold}
+
+/* Cart
+---------------------------------- */
+form#ViewCart{z-index:1}
+#buttonContainer{margin-top:15px; }
+#underButtons{position:relative; zoom:1}
+#additionalInfo{}
+#cartBanner{margin:0 0 20px 0}
+#keepShopping{margin:20px 0}
+#giftThisCart{}
+/*#cartInfo{margin-right:185px}
+*/
+#cartAddPayment{position:absolute; width:170px; height:100px; top:0; right:0}
+#checkoutSupportLinks{margin-top:-38px}
+#customerAssurance{font-size:0.8em; background-color:transparent; border:0 margin:0; padding:0; width:auto;}
+#screen {display:none;z-index:88888;position:fixed;top:0;left:0;width:100%;height:100%;background:#666;opacity:0.75;filter:alpha(opacity=75);}
+#dialog {text-align:left;padding:15px 15px 30px;background:#fff;position:fixed;width:450px;z-index:99999;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;}
+#dialog p {padding-bottom:5px;}
+#dialog .error {color:red;font-weight:bold;font-size:1.4em;display:none;}
+#dialog table {width:100%;font-size:1.2em;}
+#dialog thead td {font-weight:bold;background:#eee;}
+#dialog tbody td {border-bottom:1px dotted #eee;vertical-align:top;}
+#dialog tbody td input {margin-bottom:5px;}
+#dialog td {text-align:left;padding:5px;}
+#dialog thead td.spacer, #dialog tbody td.spacer {background:#fff;padding:3px;}
+#dialog tbody td.desc {padding-top:12px;}
+#dialog .stationeryProblemSubmit {float:left;text-align:center;margin:20px auto 0;width:120px;display:block;padding:7px 10px;color:#fff;text-decoration:none;font-weight:bold;background:#58a619;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;}
+#topButtonContainer, #bottomAltPay, #bottomButtonContainer{margin-bottom:10px; float:right; width:50%;text-align:center;width:300px;}
+#bottomButtonContainer {margin-bottom:0;}
+#topKeepShoppingContainer, #bottomKeepShoppingContainer {width:45%;float:left;}
+.orId{width:272px; background:url(http://content.cpcache.com/marketplace/img/orbackground_transparent.gif) no-repeat center left; height:26px; margin:0 auto;}
+.orId p{color:#666; font-weight:900; font-size:11px; background-color:none; text-align:center;  padding-top:5px; height:14px; font-variant:small-caps; font-family:arial; margin:0 0 5px;}
+#paypalFormButton, #paypalFormButton2{height:26px; width:100%; overflow:hidden; float:left;}
+#paypalFormButton2 img:hover{cursor:pointer;cursor:hand;} 
+#AmazonInlineWidget2, #AmazonInlineWidget{width:136px; float:right}
+.checkoutBtn{margin:0 auto;}
+.keepShoppingBtn,.updateBtn,.checkoutBtn,.saveCartBtn{background-color:#DDDDDD;padding:5px 12px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;border:1px outset;font-size:13px;background:#EEEEEE;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#fefefe), to(#DDDDDD));background:-moz-linear-gradient(#fefefe, #DDDDDD);background:linear-gradient(#fefefe, #DDDDDD);cursor:pointer; }
+.checkoutBtn{font-weight:bold;text-transform:uppercase;width:285px;}
+.saveCartBtn{font-size:11px;padding:2px 4px;margin-top:5px;}
+.updateBtn{margin-top:5px;font-size:11px;} 
+
+/* CP Footer 
+---------------------------------- */
+#cafepressFooter{width:650px; margin:20px auto}
+#cafepressFooter img{float:left}
+#cafepressFooter p{float:left; margin:0 0 0 10px; font-size:11px; text-align:left}
+
+/* Clear
+---------------------------------- */
+html body * span.clear, html body * div.clear, html body * li.clear, html body * dd.clear{border:0; clear:both; float:none; margin:0; padding:0; width:0; display:block; list-style:none; background:none; font-size:0; overflow:hidden; visibility:hidden; height:0}
+.clearfix:after{clear:both; display:block; content:'.'; visibility:hidden; height:0}
+.clearfix{display:inline-block}
+* html .clearfix{height:1%}
+.clearfix{display:block}
+
+/* Legacy widgets file */
+/* handles widgets like tabs, drop-down menus, and buttons */
+/******* BUTTONS ************/
+/*
+Buttons are always *block* elements (meaning they have an implied <br>at the end of them.
+See sample usages at /test/cpbutton.aspx
+*/
+.cpButtonContainerDialog{margin-top:20px}
+.cpButtonContainer, .cpButtonContainerRight, .cpButtonCo

@@ -1,0 +1,51 @@
+.ccfilerow {
+	padding: 2px 8px 2px 8px;
+	margin-bottom: 1px;
+	/* height: 18px; */
+}
+.ccfilebox {
+	float: right;
+}
+.ccfilename {
+	height: 18px;
+	padding: 2px 0 0 22px;
+	background-repeat: no-repeat;
+	background-position: 4px 0px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 250px;
+}
+.ccfilename a,
+.ccfilename a:link,
+.ccfilename a:active,
+.ccfilename a:visited,
+.ccfilename a:hover {
+	font-weight: normal;
+	text-decoration: none;
+	color: #606060;
+}
+.ccfilename a:hover {
+	text-decoration: underline;
+}
+.ccfiletype_folder .ccfilename {
+	background-image: url(images/startpage/ondemand-folder.gif);
+}
+.ccfiletype_media .ccfilename {
+	background-image: url(images/startpage/ondemand-media.gif);
+}
+.ccfiletype_other {
+}
+.ccfilerow_odd { background-color: #FFFFFF; }
+.ccfilerow_even { background-color: #FFFFFF; }
+
+.ccfilesize {
+	padding-top: 2px;
+	float: right;
+	text-align: right;
+	width: 35px;
+}
+.ccfilem3u {
+	text-align: center;
+	padding: 5px;
+}

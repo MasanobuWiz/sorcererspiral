@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>HackThisSite Radio</title>
+	
+	<link rel="stylesheet" type="text/css" href="/centova/theme/startpage.css">
+	<link rel="stylesheet" type="text/css" href="/centova/theme/widget_ondemand.css">
+	<link rel="stylesheet" type="text/css" href="/centova/theme/widget_recenttracks.css">
+<link rel="stylesheet" type="text/css" href="/centova/system/tabset/centova/centova.css">
+<script language="JavaScript" src="/centova/system/tabset/tabset.js"></script>
+<script language="JavaScript" src="/centova/system/utility.js"></script>
+</head>
+<body>
+
+<div id="header">
+	<div id="logo">
+		<h1>HackThisSite Radio</h1>
+		<h2>128kbps stream</h2>
+	</div>
+</div>
+
+
+<div id="topbar">
+	<div id="nowplaying">
+				<div id="cc_tunein">
+	<a href="http://radio.hackthissite.org/centova/tunein.php/htsradio/playlist.pls"><img align="absmiddle" src="http://radio.hackthissite.org/centova/system/images/tunein-pls.png" border="0" alt="Winamp" title="Winamp"></a>
+	<a href="http://radio.hackthissite.org/centova/tunein.php/htsradio/playlist.asx"><img align="absmiddle" src="http://radio.hackthissite.org/centova/system/images/tunein-asx.png" border="0" alt="windows Media Player" title="Windows Media Player"></a>
+	<a href="http://radio.hackthissite.org/centova/tunein.php/htsradio/playlist.ram"><img align="absmiddle" src="http://radio.hackthissite.org/centova/system/images/tunein-ram.png" border="0" alt="Real Player" title="Real Player"></a>
+	<a href="http://radio.hackthissite.org/centova/tunein.php/htsradio/playlist.qtl"><img align="absmiddle" src="http://radio.hackthissite.org/centova/system/images/tunein-qtl.png" border="0" alt="QuickTime" title="QuickTime"></a>
+</div>
+
+		Now playing: <a href="/centova/tunein.php/htsradio/tunein.pls" id="cc_stream_info_song">Loading...</a> (<span id="cc_stream_info_server"></span> - <span id="cc_stream_info_listeners"></span> Listeners)<br>
+		<script language="javascript" type="text/javascript" src="/centova/system/streaminfo.js"></script>
+		<script language="javascript" type="text/javascript" src="/centova/js.php/htsradio/streaminfo/rnd0"></script>
+
+	</div>
+</div>
+
+
+<div id="container">
+	
+	<div id="leftnav">
+				
+		<h3>Listen Now!</h3>
+<object width="180" height="60" bgcolor="#FFFFFF">
+<param name="movie" value="ffmp3-config.swf">
+<param name="flashvars" value="url=http://radio.hackthissite.org:8000/stream&lang=en&codec=mp3&volume=75&autoplay=false&traking=false&jsevents=false&buffering=5&skin=ffmp3-mcclean.xml&title=HackThisSite%20Radio&welcome=Welcome%20to HTS Radio">
+<param name="wmode" value="window">
+<param name="allowscriptaccess" value="always">
+<param name="scale" value="noscale">
+<embed src="ffmp3-config.swf" flashvars="url=http://radio.hackthissite.org:8000/stream&lang=en&codec=mp3&volume=75&autoplay=false&traking=false&jsevents=false&buffering=5&skin=ffmp3-mcclean.xml&title=HackThisSite%20Radio&welcome=Welcome%20to HTS Radio" width="180" scale="noscale" height="60" wmode="window" bgcolor="#FFFFFF" allowscriptaccess="always" type="application/x-shockwave-flash">
+</object>
+<br><br>
+<h3>Recent Tracks</h3>
+		
+		<div id="cc_recent_tracks"></div>
+		<script language="javascript" type="text/javascript" src="/centova/system/recenttracks.js"></script>
+		<script language="javascript" type="text/javascript" src="/recenttracks.php"></script>
+		
+	</div>
+	
+	
+	<div id="content">
+		
+		<h3>HackThisSite Radio News</h3> 
+		<div class="block"> 
+			<div class="content"> 
+Be sure to check out our IRC Channel:<br><br>
+<strong>Server</strong>: irc.hackthissite.org<br>
+<strong>Ports</strong>: 6667 (non-SSL), 7000 (SSL)<br>
+<strong>Channel</strong>: #radio<br>
+			</div> 
+		</div>
+
+<h3>Scheduled Playlist</h3>
+(All times GMT)<br><br>
+
+<div id="pagetabs" class="tabset"></div>
+<script language="javascript">
+window.tabset = new TabSet('pagetabs','window.tabset');
+</script>
+
+<div id="tab_1" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Sun',null,'tab_1');
+window.tabset.select(0);
+</script>
+
+<div id="tab_2" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Mon',null,'tab_2');
+window.tabset.select(0);
+</script>
+
+<div id="tab_3" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Tues',null,'tab_3');
+window.tabset.select(0);
+</script>
+
+<div id="tab_4" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Wed',null,'tab_4');
+window.tabset.select(0);
+</script>
+
+<div id="tab_5" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Thur',null,'tab_5');
+window.tabset.select(0);
+</script>
+
+<div id="tab_6" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Fri',null,'tab_6');
+window.tabset.select(0);
+</script>
+
+<div id="tab_7" class="tab_page" style="height: 150px">Tech Podcasts - All Day!<br><br>
+(No set schedule yet)
+</div>
+<script language="javascript">
+window.tabset.add('Sat',null,'tab_7');
+window.tabset.select(0);
+</script>
+
+<script language="javascript">
+window.tabset.select(4);
+</script>
+<br>
+				
+		
+		
+		
+	
+		
+		
+		
+		<h3>Current Listener Locations</h3>
+
+		<div class="block">
+			<div id="cc_google_maps" style="width: 370px; height: 400px"></div>
+		</div>
+		<script src="http://maps.google.com/maps?file=api&v=2&sensor=false&key=ABQIAAAAdpC5EIlVb_WDXZYnqlSHnRTfncKEIk_YHId0r-KZShR6Zk2okhSWLs1iUJUgIhWe1RIHBf3Hk4UH3w" type="text/javascript"></script>
+		<script language="javascript" type="text/javascript" src="/centova/system/googlemaps.js"></script>
+		<script language="javascript" type="text/javascript" src="/centova/js.php/htsradio/googlemaps/rnd0"></script>
+		
+		<script type="text/javascript">
+		if (!window.onload) window.onload = cc_googlemaps_initialize;
+		</script>
+				
+
+	</div>
+	
+</div>
+
+<div id="footer">
+	<div class="content">
+		<div style="float: right">Hosted by  <a href="http://www.hackthissite.org">HackThisSite</a></div>
+		All trademarks and copyrights are the property of their respective owners
+	</div>
+</div>
+
+</body>
+</html>

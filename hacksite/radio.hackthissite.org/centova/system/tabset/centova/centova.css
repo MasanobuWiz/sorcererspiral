@@ -1,0 +1,82 @@
+.tabset {
+	cursor: default;
+	-moz-user-select: none;
+	margin-bottom: 3px;
+	margin-top: 1px;
+	height: 26px;
+
+	background-image: url(tabset-bg.png);
+	background-repeat: repeat-x;
+	
+	padding-left: 2px;
+	margin-bottom: 0px;
+}
+
+.tab, .tab_left, .tab_center, .tab_right, .tab_slack {
+	float: left;
+	height: 24px;
+}
+
+.tab_left, .tab_center, .tab_right, .tab_left_hover, .tab_center_hover, .tab_right_hover {
+	height: 24px;
+	background-repeat: no-repeat;
+	padding-top: 6px;
+}
+.tab_center, .tab_center_hover {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.tab_left, .tab_right, .tab_left_hover, .tab_right_hover {
+	width: 4px;
+}
+.tab_left {
+	background-image: url(tab-normal-left.png);
+}
+.tab_center {
+	background-image: url(tab-normal-bg.png);
+	background-repeat: repeat-x;
+}
+.tab_right {
+	background-image: url(tab-normal-right.png);
+}
+.tab_left_hover {
+	background-image: url(tab-hover-left.png);
+}
+.tab_center_hover {
+	background-image: url(tab-hover-bg.png);
+	background-repeat: repeat-x;
+}
+.tab_right_hover {
+	background-image: url(tab-hover-right.png);
+}
+
+.tab_left_active, .tab_center_active, .tab_right_active {
+	height: 24px;
+	background-repeat: no-repeat;
+}
+.tab_left_active {
+	width: 5px;
+	background-image: url(tab-active-left.png);
+}
+.tab_right_active {
+	width: 5px;
+	background-image: url(tab-active-right.png);
+}
+.tab_center_active {
+	background-image: url(tab-active-bg.png);
+	background-repeat: repeat-x;
+}
+.tab_slack {
+	height: 24px;
+}
+.tab_page,.tab_page_list {
+	background-color: #EDEFF5;
+	background-color: #FFFFFF;
+	border: 1px solid #BFC4D7;
+	border-top: none;
+	padding: 10px 15px 10px 15px;
+	display: none;
+}
+.tab_page_list {
+	padding: 0px;
+}
